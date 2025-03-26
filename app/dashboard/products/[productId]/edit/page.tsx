@@ -6,7 +6,7 @@ import { Categories } from '../../_components/Categories';
 import { CategoriesSkeleton } from '@/app/dashboard/_skeletons/CategoriesSkeleton';
 import { EditProduct } from './_components/EditProduct';
 
-const EditProductPage = ({ params }: { params: Promise<{ productId: string }> }) => {
+const EditProductPage = async ({ params }: { params: Promise<{ productId: string }> }) => {
   return (
     <>
       <AdminPagesTitle>Редактировать продукт</AdminPagesTitle>
