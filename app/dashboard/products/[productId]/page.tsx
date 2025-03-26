@@ -1,4 +1,4 @@
-const ProductIdPage = () => {
+const ProductIdPage = async () => {
     'use cache'
     return (
         <div>ProductIdPage</div>
