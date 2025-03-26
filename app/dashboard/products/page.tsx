@@ -27,7 +27,9 @@ const ProductsPage = ({ searchParams }: { searchParams: Promise<{ [key: string]:
           <SuspendedSelectCategoryComponent />
         </Suspense>
         <div />
-        <AvailableCheckbox />
+        <Suspense>
+          <AvailableCheckbox />
+        </Suspense>
       </div>
       <Suspense fallback={<TableSkeleton />}>
         <SuspendedTableComponent searchParams={searchParams} />
@@ -44,7 +46,7 @@ async function SuspendedTableComponent({ searchParams }: { searchParams: Promise
   return <ProductsTable products={products} />;
 }
 
-async function SuspendedSelectCategoryComponent(){
+async function SuspendedSelectCategoryComponent() {
   const categories = await getCategories();
   return <SelectCategory categories={categories} />;
 }

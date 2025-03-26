@@ -9,6 +9,7 @@ import { NumberOfTableHead } from './table-elements/NumberTableHead';
 import { DeleteProductMenuItem } from './table-elements/DeleteProductMenuItem';
 import { ToggleAvailableMenuItem } from './table-elements/ToggleAvailableMenuItem';
 import { ProductTable } from '@/drizzle/schema';
+import { Suspense } from 'react';
 
 export const ProductsTable = ({ products }: { products: (typeof ProductTable.$inferSelect)[] }) => {
   return (
@@ -18,8 +19,12 @@ export const ProductsTable = ({ products }: { products: (typeof ProductTable.$in
           <TableRow>
             <TableHead className="w-0"></TableHead>
             <TableHead>Название</TableHead>
-            <PriceTableHead />
-            <NumberOfTableHead />
+            <Suspense fallback={<p>Load...</p>}>
+              <PriceTableHead />
+            </Suspense>
+            <Suspense fallback={<p>Load...</p>}>
+              <NumberOfTableHead />
+            </Suspense>
             <TableHead>Продано</TableHead>
             <TableHead>Ожидает доставки</TableHead>
             <TableHead className="w-0"></TableHead>
