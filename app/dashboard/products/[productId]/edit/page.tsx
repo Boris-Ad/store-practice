@@ -15,9 +15,9 @@ const EditProductPage = async () => {
         <Suspense fallback={<CategoriesSkeleton />}>
           <SuspendedCategoriesComponent />
         </Suspense>
-        <Suspense>
-          {/* <SuspendedEditProductComponent params={params} /> */}
-        </Suspense>
+        {/* <Suspense>
+          <SuspendedEditProductComponent params={params} />
+        </Suspense> */}
       </section>
     </>
   );
