@@ -3,7 +3,7 @@
 
 @theme inline {
   --font-montserrat: var(--font-montserrat);
-  --font-open_sans: var(--font-open_sans);
+  --font-roboto: var(--font-roboto);
  
   --color-face-background: oklch(0.279 0.041 260.031);
   --color-face-foreground: oklch(1 0 0);

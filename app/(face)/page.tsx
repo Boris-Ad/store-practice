@@ -1,7 +1,7 @@
 const FacePage = () => {
     return (
         <div>
-            <h2 className="font-open_sans">Face Page</h2>
+            <h2 className="font-roboto">Face Page</h2>
         </div>
     )
 }

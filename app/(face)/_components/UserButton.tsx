@@ -33,14 +33,14 @@ export const UserButton = ({ session }: { session: Session | null }) => {
       </button>
       {buttonRef.current && (
         <ButtonDropMenu isVisible={isVisible} removeMenu={() => setIsVisible(false)} buttonRef={buttonRef.current}>
-          <ul className="text-lg text-slate-100 bg-slate-700">
+          <ul className="text-slate-100 bg-slate-700 font-roboto font-light">
             {session ? (
               <>
-                <li className="px-2 py-1">{session.user?.name}</li>
+                <li className="px-2 pt-2 pb-1">{session.user?.name}</li>
                 <Separator className="bg-slate-600" />
                 {adminRole && (
                   <li className="px-2 py-1 hover:bg-slate-600">
-                    <Link href="/admin" className="flex items-center space-x-1">
+                    <Link href="/dashboard" className="flex items-center space-x-1">
                       <ShieldUser size={18} />
                       <span>Админка</span>
                     </Link>

@@ -19,6 +19,7 @@
 
 # production
 /build
+/drizzle/migrations/*
 
 # misc
 .DS_Store
@@ -35,7 +36,7 @@ yarn-error.log*
 
 # vercel
 .vercel
-
+.vscode
 # typescript
 *.tsbuildinfo
 next-env.d.ts
