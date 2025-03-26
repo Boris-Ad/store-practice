@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 
 const ProductIdPage = async ({ params }: { params: Promise<{ productId: string }> }) => {
-  'use cache';
+  
   return (
     <div>
       <Suspense>
