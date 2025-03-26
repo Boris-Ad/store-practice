@@ -1,18 +1,17 @@
- "use cache"
+import { Suspense } from 'react';
 
-import { unstable_cacheTag } from 'next/cache';
-
-const ProductIdPage = async ({ params }: { params: Promise<{ productId: string }> }) => {
-   
-
-    unstable_cacheTag('productId')
-    
-  const { productId } = await params;
+const ProductIdPage = ({ params }: { params: Promise<{ productId: string }> }) => {
   return (
-    <div>
-      <h2>{productId}</h2>
-    </div>
+    <Suspense>
+      <Section params={params} />
+    </Suspense>
   );
 };
 
 export default ProductIdPage;
+
+async function Section({ params }: { params: Promise<{ productId: string }> }) {
+  const { productId } = await params;
+
+  return <h2>ProductId: {productId}</h2>;
+}

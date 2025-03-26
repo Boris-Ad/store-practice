@@ -1,6 +1,6 @@
 import { DataPlaceholderImage } from '@/types';
 import { getPlaiceholder } from 'plaiceholder';
-import { unstable_cacheTag} from 'next/cache';
+import { unstable_cacheTag } from 'next/cache';
 
 export const getImage = async (src: string) => {
   'use cache';

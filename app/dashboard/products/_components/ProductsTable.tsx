@@ -48,6 +48,9 @@ export const ProductsTable = ({ products }: { products: (typeof ProductTable.$in
                     <DropdownMenuItem>
                       <Link href={'/dashboard/products/' + product.id + '/edit'}>Редактировать</Link>
                     </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <Link href={'/dashboard/products/' + product.id }>Visit</Link>
+                    </DropdownMenuItem>
                     <ToggleAvailableMenuItem productId={product.id} available={!product.available} />
                     <DropdownMenuSeparator />
                     <DeleteProductMenuItem productId={product.id} />

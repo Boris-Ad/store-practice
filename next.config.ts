@@ -2,7 +2,7 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   experimental: {
-    dynamicIO: false,
+    dynamicIO: true,
     serverActions: {
       bodySizeLimit: '10mb',
     },
