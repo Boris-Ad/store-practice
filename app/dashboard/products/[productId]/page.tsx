@@ -1,19 +1,10 @@
-import { Suspense } from 'react';
-
 const ProductIdPage = async ({ params }: { params: Promise<{ productId: string }> }) => {
-  
+  const { productId } = await params;
   return (
     <div>
-      <Suspense>
-        <SuspendedProduct params={params} />
-      </Suspense>
+      <h2>{productId}</h2>
     </div>
   );
 };
 
 export default ProductIdPage;
-
-async function SuspendedProduct({ params }: { params: Promise<{ productId: string }> }) {
-  const { productId } = await params;
-  return <p>{productId}</p>;
-}
